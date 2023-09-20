@@ -1,0 +1,133 @@
+<mvc:View xmlns:odata="sap.ui.comp.odata" xmlns:smarttable="sap.ui.comp.smarttable" controllerName="goscm.documentocad.controller.MainView"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page">
+        <customHeader>
+            <Bar id="Bar1">
+                <contentLeft>
+                    <Button id="btn_Salir" icon="sap-icon://exit-full-screen"/>
+                </contentLeft>
+                <contentMiddle>
+                    <Title id="encabezado" text="{i18n>title}"></Title>
+                </contentMiddle>
+                <contentRight>
+                    <Image id="logo" src="/images/mabe2.jpg/" width="2rem" class="sapUiTinyMarginBottom"/>
+                </contentRight>
+            </Bar>
+        </customHeader>
+        
+        <content>
+            <Panel id="panel1">
+
+                <HBox id="Nserie_o1" class="sapUiSmallMarginBottom">
+                    <Label id="lb_Nserie" text="No. de Serie:   " class="sapUiSmallMarginEnd sapUiTinyMarginTop"></Label>
+                    <FlexBox width="100%" direction="Column">
+                    <Input id="input_Nserie_o1" class="sapUiSmallMarginEnd" width="100%" enabled="false"/>
+                    </FlexBox>
+                </HBox>
+
+                <HBox id="Modelo_o1" class="sapUiSmallMarginBottom">
+                    <Label id="lb_Modelo" text="Modelo:   " class="sapUiSmallMarginEnd sapUiTinyMarginTop"></Label>
+                    <FlexBox width="100%" direction="Column">
+                    <Input id="input_Modelo_o1" class="sapUiSmallMarginEnd" width="100%" enabled="false"/>
+                    </FlexBox>
+                </HBox>
+
+                <HBox id="NHallazgos_o1" class="sapUiSmallMarginBottom">
+                    <Label id="lb_NHallazgos" text="Numero de Hallazgos:   " class="sapUiSmallMarginEnd sapUiTinyMarginTop"></Label>
+                    <FlexBox width="100%" direction="Column">
+                    <Input id="input_NHallazgos_o1" class="sapUiSmallMarginEnd" width="100%" enabled="false"/>
+                    </FlexBox>
+                </HBox>
+
+                <HBox id="RHallazgos_o1" class="sapUiSmallMarginBottom">
+                    <Label id="lb_RHallazgos" text="Hallazgos Registrados:   " class="sapUiSmallMarginEnd sapUiTinyMarginTop"></Label>
+                    <FlexBox width="100%" direction="Column">
+                    <Input id="input_RHallazgos_o1" class="sapUiSmallMarginEnd" width="100%" enabled="false"/>
+                    </FlexBox>
+                </HBox>
+
+                <HBox id="Defecto_o1" class="sapUiSmallMarginBottom">
+                    <Label id="lb_Defecto_o1" text="Defecto:   " class="sapUiSmallMarginEnd sapUiTinyMarginTop" ></Label>
+                <FlexBox width="100%" direction="Column">  
+                    <ComboBox id="input_Defecto_o1" class="sapUiSmallMarginEnd" width="100%"/>
+                </FlexBox>
+                </HBox>
+
+                <HBox id="CConformidades_o1" class="sapUiSmallMarginBottom">
+                    <Label id="lb_CConformidades" text="Cantidad Conformidades:   " class="sapUiSmallMarginEnd sapUiTinyMarginTop"></Label>
+                    <FlexBox width="100%" direction="Column">
+                    <Input id="input_CConformidades_o1" class="sapUiSmallMarginEnd" width="100%" />
+                    </FlexBox>
+                </HBox>
+
+                    <HBox id="CRegistradas_o1" class="sapUiSmallMarginBottom">
+                    <Label id="lb_CRegistradas" text="Conformidades Registradas:   " class="sapUiSmallMarginEnd sapUiTinyMarginTop"></Label>
+                    <FlexBox width="100%" direction="Column">
+                    <Input id="input_CRegistradas_o1" class="sapUiSmallMarginEnd" width="100%" enabled="false"/>
+                    </FlexBox>
+                </HBox>
+
+                <HBox id="NoConformidad_o1" class="sapUiSmallMarginBottom">
+                    <Label id="lb_NoConformidad_o1" text="NoConformidad:   " class="sapUiSmallMarginEnd sapUiTinyMarginTop" ></Label>
+                <FlexBox width="100%" direction="Column">  
+                    <ComboBox id="input_NoConformidad_o1" class="sapUiSmallMarginEnd" width="100%"/>
+                </FlexBox>
+                </HBox>
+                
+                <HBox id="EstructuraD_o1" class="sapUiSmallMarginBottom">
+                    <Label id="lb_EstructuraD_o1" text="Estructura Daño:   " class="sapUiSmallMarginEnd sapUiTinyMarginTop" ></Label>
+                <FlexBox width="100%" direction="Column">  
+                    <ComboBox id="input_EstructuraD_o1" class="sapUiSmallMarginEnd" width="100%"/>
+                </FlexBox>
+                </HBox>
+
+                <HBox id="ADanada_o1" class="sapUiSmallMarginBottom">
+                    <Label id="lb_ADanada_o1" text="Area Dañada:   " class="sapUiSmallMarginEnd sapUiTinyMarginTop" ></Label>
+                <FlexBox width="100%" direction="Column">  
+                    <ComboBox id="input_ADanada_o1" class="sapUiSmallMarginEnd" width="100%"/>
+                </FlexBox>
+                </HBox>
+
+                <FlexBox marginTop="auto" direction="Column">
+                    <FlexBox direction="Row" justifyContent="SpaceBetween" alignItems="Begin" width="100%" height="100%" >
+                    <FlexBox justifyContent="Start" class="sapUiSmallMarginBottom">
+                <HBox id="LEvidencia_o1" class="sapUiSmallMarginBottom sapUiSmallMarginEnd">
+                    <Label id="lb_LEvidencia_o1" text="Lista Evidencia:   " class="sapUiSmallMarginEnd sapUiTinyMarginTop" ></Label>
+                <FlexBox width="100%" direction="Column">  
+                    <ComboBox id="input_LEvidencia_o1" class="sapUiSmallMarginEnd" width="100%"/>
+                </FlexBox>
+                </HBox>
+<!-- CAMARA -->
+                <HBox id="camara_o1" alignContent="End" justifyContent="Start" alignItems="End" class="sapUiSmallMarginBottom">
+                    <Button id="btn_camara_o1" text="camara" type="Emphasized" class="sapUiSmallMarginEnd"  icon="sap-icon://camera"  />
+                </HBox>
+            </FlexBox></FlexBox></FlexBox>
+                
+                <HBox id="Observaciones_o1" class="sapUiSmallMarginBottom">
+                    <Label id="lb_Observaciones" text="Observaciones:   " class="sapUiSmallMarginEnd sapUiTinyMarginTop"></Label>
+                    <FlexBox width="100%" direction="Column">
+                    <Input id="input_Observaciones_o1" class="sapUiSmallMarginEnd" width="100%" />
+                    </FlexBox>
+                </HBox>
+
+                <FlexBox marginTop="auto" direction="Column">
+                <FlexBox direction="Row" justifyContent="SpaceBetween" alignItems="Begin" width="100%" height="100%" >
+                <FlexBox justifyContent="Start" class="sapUiSmallMarginBottom">
+                <HBox id="Siguiente_o1" alignContent="End" justifyContent="Start" alignItems="End" class="sapUiTinyMarginBottom">
+                    <Button id="btn_Siguiente_o1" text="Siguiente" type="Emphasized" class="sapUiSmallMarginEnd" />
+                </HBox>
+                </FlexBox>
+
+                <FlexBox justifyContent="End" class="sapUiSmallMarginBottom sapUiLargeMarginTop" >   
+                <HBox id="Guardar_o1" alignContent="End" justifyContent="End" alignItems="End" class="sapUiTinyMarginBottom">
+                    <Button id="btn_Guardar_o1" text="Guardar" type="Emphasized" class="sapUiSmallMarginEnd" />
+                </HBox>
+                </FlexBox></FlexBox></FlexBox>
+            </Panel>
+        
+
+        
+        </content>
+    </Page>
+</mvc:View>

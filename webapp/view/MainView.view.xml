@@ -1,0 +1,130 @@
+<mvc:View controllerName="appmabetest.mabetest.controller.MainView"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        
+         <customHeader>
+            <Bar id="Bar1">
+                <contentLeft>
+                    <Button id="btn_Salir" icon="sap-icon://exit-full-screen"/>
+                </contentLeft>
+                <contentMiddle>
+                    <Title id="encabezado" text="{i18n>title}"></Title>
+                    
+                </contentMiddle>
+                <contentRight>
+                    <Image id="logo" src="\mabe__test\webapp\images\mabe2.jpg" width="2rem" class="sapUiTinyMarginBottom"/>
+                </contentRight>
+            </Bar>
+        </customHeader>       
+         
+        <content>
+           <Panel id="panel1">
+
+                <FlexBox direction="Row" justifyContent="SpaceBetween" alignItems="Begin" width="100%" height="100%" >              
+                    <FlexBox justifyContent="Start" class="sapUiSmallMarginBottom">
+                    <HBox id="Estatus_o1" class="sapUiSmallMarginStart sapUiTinyMarginTop">
+                        <Label id="lb_Estatus" text="status:   " class="sapUiSmallMarginStart sapUiTinyMarginTop"></Label>
+                        <Input id="input_Estatus_o1" class="sapUiSmallMarginEnd" width="170px" enabled="false"/>
+                    </HBox>
+                    </FlexBox>
+    
+                    <FlexBox justifyContent="End" class="sapUiSmallMarginBottom">
+                    <HBox id="Folio_o1" class="sapUiSmallMarginEnd sapUiTinyMarginTop">
+                        <Label id="lb_Folio_o1" text="Folio:   " class="sapUiSmallMarginEnd sapUiTinyMarginTop"></Label>
+                        <Input id="Input_Folio_o1" enabled="false"/>
+                    </HBox>
+                    </FlexBox></FlexBox>
+                    
+                                      <HBox id="Turno_o1" class="sapUiSmallMarginBottom">
+                        <Label id="lb_Turno_o2" text="Turno:" class="sapUiSmallMarginEnd sapUiTinyMarginTop"></Label>
+                        <FlexBox width="100%" direction="Column">
+                         <ComboBox id="OperadorSetComboBox"
+                        class="sapUiSmallMarginEnd">
+                        </ComboBox>
+                        </FlexBox>
+                    </HBox>   
+
+
+                    <HBox id="CDanadas_o1" class="sapUiSmallMarginBottom">
+                        <Label id="lb_CDanadas" text="Cantidad de piezas Dañadas:   " class="sapUiSmallMarginEnd sapUiTinyMarginTop"></Label>
+                        <FlexBox width="100%" direction="Column">
+                        <Input id="input_CDanadas_o1" class="sapUiSmallMarginEnd" width="100%" />
+                        </FlexBox>
+                    </HBox>
+
+                    <HBox id="PRegistradas_o1" class="sapUiSmallMarginBottom">
+                        <Label id="lb_PRegistradas" text="Piezas Registradas:   " class="sapUiSmallMarginEnd sapUiTinyMarginTop"></Label>
+                        <FlexBox width="100%" direction="Column">
+                        <Input id="input_PRegistradas_o1" class="sapUiSmallMarginEnd" width="100%" enabled="false"/>
+                        </FlexBox>
+                    </HBox>
+
+                    <HBox id="Nserie_o1" class="sapUiSmallMarginBottom">
+                        <Label id="lb_Nserie" text="No. de Serie:   " class="sapUiSmallMarginEnd sapUiTinyMarginTop"></Label>
+                        <FlexBox width="100%" direction="Column">
+                        <Input id="input_Nserie_o1" class="sapUiSmallMarginEnd" width="100%" />
+                        </FlexBox>
+                    </HBox>
+
+                    <HBox id="Modelo_o1" class="sapUiSmallMarginBottom">
+                        <Label id="lb_Modelo" text="Modelo:   " class="sapUiSmallMarginEnd sapUiTinyMarginTop"></Label>
+                        <FlexBox width="100%" direction="Column">
+                        <Input id="input_Modelo_o1" class="sapUiSmallMarginEnd" width="100%" />
+                        </FlexBox>
+                    </HBox>
+
+                    <HBox id="UbicacionO_o1" class="sapUiSmallMarginBottom">
+                        <Label id="lb_UbicacionO_o1" text="Ubicacion Origen:   " class="sapUiSmallMarginEnd sapUiTinyMarginTop"></Label>
+                        <FlexBox width="100%" direction="Column">
+                        <ComboBox id="input_UbicacionO_o1" class="sapUiSmallMarginEnd" width="100%" enabled="{/UOEnabled}"/>
+                        </FlexBox>
+                    </HBox>
+
+                    <HBox id="UbicacionD_o1" class="sapUiSmallMarginBottom">
+                        <Label id="lb_UbicacionD_o1" text="Ubicacion Destino:   " class="sapUiSmallMarginEnd sapUiTinyMarginTop"></Label>
+                        <FlexBox width="100%" direction="Column">
+                        <ComboBox id="input_UbicacionD_o1" class="sapUiSmallMarginEnd" width="100%" />
+                        </FlexBox>
+                    </HBox>
+
+                    <HBox id="NHallazgos_o1" class="sapUiSmallMarginBottom">
+                        <Label id="lb_NHallazgos" text="Numero de Hallazgos:   " class="sapUiSmallMarginEnd sapUiTinyMarginTop"></Label>
+                        <FlexBox width="100%" direction="Column">
+                        <Input id="input_NHallazgos_o1" class="sapUiSmallMarginEnd" width="100%" />
+                        </FlexBox>
+                    </HBox>
+
+                    <HBox id="RHallazgos_o1" class="sapUiSmallMarginBottom">
+                        <Label id="lb_RHallazgos" text="Hallazgos Registrados:   " class="sapUiSmallMarginEnd sapUiTinyMarginTop"></Label>
+                        <FlexBox width="100%" direction="Column">
+                        <Input id="input_RHallazgos_o1" class="sapUiSmallMarginEnd" width="100%" enabled="false"/>
+                        </FlexBox>
+                    </HBox>
+
+                    <HBox id="RegistroLI_o1" class="sapUiLargeMarginBottom">
+                        <Label id="lb_RegistroLI" text="Registro LI:   " class="sapUiSmallMarginEnd sapUiTinyMarginTop"></Label>
+                        <FlexBox width="100%" direction="Column">
+                        <CheckBox id="input_RegistroLI_o1" class="sapUiSmallMarginEnd" width="100%" />
+                        </FlexBox>
+                    </HBox>
+                    
+                    <FlexBox marginTop="auto" direction="Column">
+                    <FlexBox direction="Row" justifyContent="SpaceBetween" alignItems="Begin" width="100%" height="100%" >
+                    <FlexBox justifyContent="Start" class="sapUiSmallMarginBottom">
+                    <HBox id="Hallazgos_o1" alignContent="End" justifyContent="Start" alignItems="End" class="sapUiTinyMarginBottom">
+                        <Button id="btn_Hallazgos_o1" text="Hallazgos" type="Emphasized" class="sapUiSmallMarginEnd" press="onPress"/>
+                    </HBox>
+                    </FlexBox>
+    
+                    <FlexBox justifyContent="End" class="sapUiSmallMarginBottom sapUiLargeMarginTop" >   
+                    <HBox id="Guardar_o1" alignContent="End" justifyContent="End" alignItems="End" class="sapUiTinyMarginBottom">
+                        <Button id="btn_Guardar_o1" text="Guardar" type="Emphasized" class="sapUiSmallMarginEnd"  press="toNext"/>
+                    </HBox>
+                    </FlexBox></FlexBox></FlexBox>
+    
+                </Panel>
+        
+        </content>
+    </Page>
+</mvc:View>

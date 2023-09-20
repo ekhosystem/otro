@@ -1,0 +1,37 @@
+<mvc:View controllerName="goscm.documentocad.controller.ScanView"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+<Page id="page">
+        <customHeader>
+            <Bar id="Bar1">
+                <contentLeft>
+                    <Button id="btn_Back" icon="sap-icon://undo" press="onBack"/>
+                </contentLeft>
+                <contentMiddle>
+                    <Title id="encabezado" text="{i18n>title}"></Title>
+                </contentMiddle>
+                <contentRight>
+                    <Image id="logo" src="/images/mabe2.jpg/" width="2rem" class="sapUiTinyMarginBottom"/>
+                </contentRight>
+            </Bar>
+        </customHeader>
+        
+        <content>
+            <Panel id="panel1">
+                <HBox id="hbox2" >
+                    <Label id="lb_Serie" text="Serie:   " class="sapUiSmallMarginEnd sapUiTinyMarginTop"></Label>
+                    <Input id="input_Serie" placeholder="Lectura num serie" class="sapUiSmallMarginEnd" width="210px"/>
+           
+                </HBox>
+                <HBox id="hbox3" alignItems="Center" justifyContent="Center" class="sapUiLargeMargin">
+                    <TextArea id="List" placeholder="Scan XXXXXX"  height="170px" width="300px" textAlign="Center"/>
+                </HBox>
+
+                <HBox id="hbox4" alignContent="End" justifyContent="End" alignItems="End" class="sapUiTinyMarginBottom">
+                    <Button id="btn_Save" text="Guardar" type="Emphasized" class="sapUiSmallMarginEnd" press="toSave"/>
+                </HBox>
+            </Panel>
+        
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZDIGITAL_CAD_SRV" xml:lang="es" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <Annotation Term="Core.SchemaVersion" String="1.0.0" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+            <EntityType Name="ZCAD_OPERADOR2" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="NoSerie"/>
+                    <PropertyRef Name="Modelo"/>
+                </Key>
+                <Property Name="NoSerie" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Número de material" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Modelo" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Número de unidad de almacén" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NoHall" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Numero de Hallazgos" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NoHallR" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Hallazgos Registrados" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Defecto" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Defecto" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NoConf" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Cantidad de Conformidades" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NoConfR" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Conformidades Registradas" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Conformidad" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="No Conformidad" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Estructura" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Estructura del daño" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AreaD" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Área dañada" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ObsCad" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Observaciones" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ZCAD_AUDITOR" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Fecha"/>
+                    <PropertyRef Name="Werks"/>
+                    <PropertyRef Name="Turno"/>
+                </Key>
+                <Property Name="Fecha" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Fecha" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Werks" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Centro" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Turno" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="turno" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NoPzD" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Piezas Dañadas" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NoPzR" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Piezas Registradas" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ZCAD_AUDITOR2" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Status"/>
+                    <PropertyRef Name="Folio"/>
+                    <PropertyRef Name="Werks"/>
+                </Key>
+                <Property Name="Status" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Estatus" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Folio" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Folio" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Werks" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Centro" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="UbicacionO" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Ubicación Origen" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="UbicacionD" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Ubicación Destino" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Modelo" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Modelo" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NoSerie" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Numero Serie" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Defecto" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Defecto" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Conformidad" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="conformidad" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Estructura" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Estructura" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AreaD" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Área dañada" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ObsCad" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Observaciones" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ZCAD_AUDITOR3" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Status"/>
+                    <PropertyRef Name="Folio"/>
+                    <PropertyRef Name="Werks"/>
+                </Key>
+                <Property Name="Status" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Estatus" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Folio" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Folio" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Werks" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Centro" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="UbicacionO" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Ubicación Origen" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="UbicacionD" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Ubicación Destino" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Cumple" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="CUMPLE" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Nocumple" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="NO CUMPLE" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ZCAD_AREA" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="AreaD"/>
+                </Key>
+                <Property Name="AreaD" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Área dañada" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Texto" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Texto area Dañada" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ZCAD_DEFECTO" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Defecto"/>
+                </Key>
+                <Property Name="Defecto" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Defecto" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Texto" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Descripcion del Defecto" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ZCAD_ESTRUCTURA" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Estructura"/>
+                </Key>
+                <Property Name="Estructura" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Estructura de Daño" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Texto" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Texto de Estructura de Daño" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ZCAD_CORREOS" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Correo"/>
+                </Key>
+                <Property Name="Correo" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Correo" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Texto" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Direccion de Correo" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ZCAD_STATUS" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Status"/>
+                </Key>
+                <Property Name="Status" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Satus" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Texto" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Denominacion de Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ZCAD_UBICACIONES" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Werks"/>
+                </Key>
+                <Property Name="Werks" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Centro" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ubicacion" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Ubicaciones Orgien y Destino" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ZCAD_OPERADOR" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Status"/>
+                    <PropertyRef Name="Folio"/>
+                </Key>
+                <Property Name="Status" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Estatus" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Folio" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Folio" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Turno" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="turno" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NoPzD" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Cantidad de Piezas Dañadas" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NoPzR" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Piezas Registradas" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NoSerie" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Número de material" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Modelo" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Modelo" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="UbicacionO" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Ubicación Origen" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="UbicacionD" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Ubicación Destino" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NoHall" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Numero de Hallazgos" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NoHallR" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Hallazgos Registrados" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FlagLi" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Registro LI" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ZCAD_TURNOS" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Turno"/>
+                </Key>
+                <Property Name="Turno" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Tunos" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Texto" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Descrpcion Turnos" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ZCAD_SUF_SERIE" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="SufSerie"/>
+                </Key>
+                <Property Name="SufSerie" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Sufijo Serie" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Texto" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Texto Sufijo Serie" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ZCAD_SUF_MODELO" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="SufModelo"/>
+                </Key>
+                <Property Name="SufModelo" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Sufijo Modelo" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Texto" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Texto Sufijo Modelo" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityContainer Name="ZDIGITAL_CAD_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ZCAD_OPERADOR2Set" EntityType="ZDIGITAL_CAD_SRV.ZCAD_OPERADOR2" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ZCAD_AUDITORSet" EntityType="ZDIGITAL_CAD_SRV.ZCAD_AUDITOR" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ZCAD_AUDITOR2Set" EntityType="ZDIGITAL_CAD_SRV.ZCAD_AUDITOR2" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ZCAD_AUDITOR3Set" EntityType="ZDIGITAL_CAD_SRV.ZCAD_AUDITOR3" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ZCAD_AREASet" EntityType="ZDIGITAL_CAD_SRV.ZCAD_AREA" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ZCAD_DEFECTOSet" EntityType="ZDIGITAL_CAD_SRV.ZCAD_DEFECTO" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ZCAD_ESTRUCTURASet" EntityType="ZDIGITAL_CAD_SRV.ZCAD_ESTRUCTURA" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ZCAD_CORREOSSet" EntityType="ZDIGITAL_CAD_SRV.ZCAD_CORREOS" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ZCAD_STATUSSet" EntityType="ZDIGITAL_CAD_SRV.ZCAD_STATUS" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ZCAD_UBICACIONESSet" EntityType="ZDIGITAL_CAD_SRV.ZCAD_UBICACIONES" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ZCAD_OPERADORSet" EntityType="ZDIGITAL_CAD_SRV.ZCAD_OPERADOR" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ZCAD_TURNOSSet" EntityType="ZDIGITAL_CAD_SRV.ZCAD_TURNOS" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ZCAD_SUF_SERIE001Set" EntityType="ZDIGITAL_CAD_SRV.ZCAD_SUF_SERIE" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ZCAD_SUF_MODELOSet" EntityType="ZDIGITAL_CAD_SRV.ZCAD_SUF_MODELO" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link rel="self" href="https://collaboration.mabempresa.com:8086/sap/opu/odata/sap/ZDIGITAL_CAD_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="https://collaboration.mabempresa.com:8086/sap/opu/odata/sap/ZDIGITAL_CAD_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

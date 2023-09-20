@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "mabe__test",
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"editor.wordBasedSuggestions": true
+	}
+}
